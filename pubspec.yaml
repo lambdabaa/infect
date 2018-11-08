@@ -1,0 +1,5 @@
+name: infect
+version: 0.0.0
+author: Gareth Ari Aye <gareth.aye@gmail.com>
+dev_dependencies:
+  test: 1.5.1
