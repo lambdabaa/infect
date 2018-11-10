@@ -22,5 +22,17 @@ void main() {
       expect(diff['baz'], equals(2));
       expect(diff['qux'], equals(2));
     });
+
+    test('dedupe', () {
+      List<Map<String, int>> result = dedupe(
+          [{'foo': 1, 'bar': 1}, {'foo': 2}, {'bar': 1, 'foo': 1}]);
+      expect(result.length, equals(2));
+    });
+
+    test('combinations', () {
+      Map<String, int> collection  = {'foo': 2, 'bar': 3, 'baz': 4, 'qux': 5};
+      List<Map<String, int>> results = combinations(collection, 2);
+      expect(results.length, equals(10));
+    });
   });
 }

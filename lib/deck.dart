@@ -37,3 +37,7 @@ List<String> create(Map<String, int> exclude) {
   });
   return parts.expand(identity).toList();
 }
+
+List<Map<String, int>> getExclusionList() {
+  return combinations(flex, 8);
+}
